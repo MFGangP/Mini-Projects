@@ -39,16 +39,15 @@ class qtApp(QWidget):
             api = NaverApi() # NaverApi 클래스 객체 생성
             node = 'news' # movie로 변경하면 영화 검색
             display = 100
-            outputs = [] # 결과 담을 리스트 변수
-            result = api.get_naver_search(node, search, 1, display)
 
+            result = api.get_naver_search(node, search, 1, display)
+            # print(result) 개발 할 때만 쓰는거
+            # 테이블 위젯에 출력하는 기능
             items = result['items'] # json결과 중에서 items 아래 배열만 추출
             self.makeTable(items) # 테이블 위젯에 데이터들을 할당 함수    
 
     def txtSearchReturned(self):
         self.btnSearchClicked() 
-            # print(result) 개발 할 때만 쓰는거
-            # 테이블 위젯에 출력하는 기능
 
     # 테이블 위젯에 데이터 표시
     def makeTable(self, items) -> None:
