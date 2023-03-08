@@ -8,6 +8,10 @@
 
 ![네이버뉴스앱](https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_news1.png?raw=true)
 
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_news2.png?raw=true" width="640" />
+<!--
+HTML 주석
+-->
 ## DB연동 GUI 개발 학습
 
 ## 미니프로젝트 실습
