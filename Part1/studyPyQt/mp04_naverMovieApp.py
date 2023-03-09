@@ -4,9 +4,9 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from NaverApi import *
 from urllib.request import urlopen, Request
 import webbrowser # 웹 브라우저 모듈
+from NaverApi import *
 
 class qtApp(QWidget):
 
@@ -77,10 +77,10 @@ class qtApp(QWidget):
                 imgLabel = QLabel()
                 imgLabel.setPixmap(QPixmap(image)) # setPixmap = PyQt에 이미지를 보여주는 함수 
 
-                # 테스트
-                f = open(f'./Part1/studyPyQt/temp/image_{i+1}.png', mode='wb') # 파일쓰기
-                f.write(data)
-                f.close()
+                # data를 이미지로 저장 가능!
+                # f = open(f'./Part1/studyPyQt/temp/image_{i+1}.png', mode='wb') # 파일쓰기
+                # f.write(data)
+                # f.close()
 
             # image = QImage(requests.get(post['image'], stream=True), width=100)
             # imgData = urlopen(post['image']).read()
