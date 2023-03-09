@@ -25,9 +25,6 @@ HTML 주석
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_movie.png?raw=true" width="640" />
 
 
- 
-
-
 ## DB연동 GUI 개발 학습
 
 ## 미니프로젝트 실습
