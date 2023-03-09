@@ -10,6 +10,8 @@
     - Qt Designer
     - Naver OpenAPI
 
+    - 네이버 API 영화 검색 앱 만들기
+        - 사용 기술 동일
 
 ![네이버뉴스앱](https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_news1.png?raw=true)
 
@@ -17,6 +19,12 @@
 <!--
 HTML 주석
 -->
+
+
+
+
+ 
+
 
 ## DB연동 GUI 개발 학습
 
