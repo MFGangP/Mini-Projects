@@ -6,12 +6,8 @@
 - QtDesigner 학습
 - Naver API 뉴스 검색 앱 만들기
     - Python 3.11.2
-    - PyQy5
-    - Qt Designer
     - Naver OpenAPI
-
-    - 네이버 API 영화 검색 앱 만들기
-        - 사용 기술 동일
+    - PyQy5 / Qt Designer
 
 ![네이버뉴스앱](https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_news1.png?raw=true)
 
@@ -20,7 +16,13 @@
 HTML 주석
 -->
 
+- Naver API 뉴스 검색 앱 만들기
+    - Python 3.11.2
+    - PyQy5 / Qt Designer
+    - Naver OpenAPI
+    - Urllib.request 이미지 다운로드 사용 *
 
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/naver_movie.png?raw=true" width="640" />
 
 
  
