@@ -26,6 +26,16 @@ HTML 주석
 
 
 ## DB연동 GUI 개발 학습
+- 주소록 프로그램 만들기
+    - Python 3.11.2
+    - MySQL 8.0 연동
+    - pymysql 모듈 사용
+    - PyQt5 / Qt Designer
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/AddressBook1.png?raw=true" width="640" />
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/AddressBook2.png?raw=true" width="640" />
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/AddressBook3.png?raw=true" width="640" />
+
 
 ## 미니프로젝트 실습
 
