@@ -36,6 +36,12 @@ HTML 주석
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/AddressBook2.png?raw=true" width="640" />
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/AddressBook3.png?raw=true" width="640" />
 
+# 파이썬 관련 추가 학습
+- QR코드 생성 앱
+    - qrcode 모듈
+
+- 컴퓨터 정보 출력 앱
+    - 
 
 ## 미니프로젝트 실습
 
