@@ -41,7 +41,7 @@ HTML 주석
     - qrcode 모듈
     - PyQt
 
-<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/qrcodeApp.png?raw=true" width="640" />
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/qrcodeApp.png?raw=true" width="320" />
 
 - 컴퓨터 정보 출력 앱
     - psutil 모듈
@@ -49,7 +49,7 @@ HTML 주석
     - requests 모듈
     - PyQt
 
-<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/cominfo_app.png?raw=true" width="640" />
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/cominfo_app.png?raw=true" width="400" />
 
 ## 미니프로젝트 실습
 
