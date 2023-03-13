@@ -4,6 +4,7 @@ import psutil
 import socket
 import requests # pip install requests
 import re
+
 from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import * # Qt.white ....
@@ -62,6 +63,7 @@ class qtApp(QWidget):
         sent = round(net_stat.bytes_sent / 1024 ** 2, 1)
         recv = round(net_stat.bytes_recv / 1024 ** 2, 1)
         self.lblNetStat.setText(f'송신 - {sent} MB / 수신 - {recv} MB')
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = qtApp() # 지난 번에 MyApp()

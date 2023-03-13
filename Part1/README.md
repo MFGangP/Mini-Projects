@@ -39,9 +39,17 @@ HTML 주석
 # 파이썬 관련 추가 학습
 - QR코드 생성 앱
     - qrcode 모듈
+    - PyQt
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/qrcodeApp.png?raw=true" width="640" />
 
 - 컴퓨터 정보 출력 앱
-    - 
+    - psutil 모듈
+    - socket 모듈
+    - requests 모듈
+    - PyQt
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/cominfo_app.png?raw=true" width="640" />
 
 ## 미니프로젝트 실습
 
