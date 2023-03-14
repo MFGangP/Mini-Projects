@@ -51,5 +51,12 @@ HTML 주석
 
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/cominfo_app.png?raw=true" width="400" />
 
+- TTS(Text To Speech)
+    - gtts 모듈
+    - playsound 모듈
+
+- 암호해제 프로그램
+    - itertools, zipfile 기본모듈
+    
 ## 미니프로젝트 실습
 
