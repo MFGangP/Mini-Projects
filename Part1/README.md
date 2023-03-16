@@ -54,18 +54,24 @@ HTML 주석
 - TTS(Text To Speech)
     - gtts 모듈
     - playsound 모듈
-<br><br>
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/tts_progrem.png?raw=true" width="400" />
+
 - 암호해제 프로그램
     - itertools, zipfile 기본모듈
     - 무차별 대입 공격(BruthForce)
-<br><br>    
+
 - Thread 사용법
     - GUI와 긴 처리기간을 가진 로직을 실행 할 시 반드시 쓰레드 사용
-<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/thread.png?raw=true" width="400" />
 
-- 이메일 전송 프로그램
-    - 
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/thread.png?raw=true" width="600" />
 
+- 이메일 전송, 대량 메일 전송 프로그램
+
+- PyGame
 
 ## 미니프로젝트 실습
 
+### 주차 및 재해 방재 디지털트윈 시스템
+
+[팀리포지토리](https://github.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1)
