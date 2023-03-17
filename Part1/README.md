@@ -68,7 +68,10 @@ HTML 주석
 
 - 이메일 전송, 대량 메일 전송 프로그램
 
-- PyGame
+- 게임만들기 PyGame
+    - PyGame
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/PyGame.png?raw=true" width="600" />
 
 ## 미니프로젝트 실습
 
