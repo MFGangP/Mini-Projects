@@ -83,6 +83,12 @@ HTML 주석
 
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/UNIVERSITY_MAP.png?raw=true" width="600" />
 
+- 계산기 앱
+    - PyQt
+    - 16개 signal을 1개의 slot 함수로 처리
+
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/calc.png?raw=true" width="400" />
+
 
 ## 미니프로젝트 실습
 
