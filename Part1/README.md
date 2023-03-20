@@ -75,6 +75,8 @@ HTML 주석
 
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/PyGameDead.png?raw=true" width="600" />
 
+- 전국 대학교 위치 맵
+
 ## 미니프로젝트 실습
 
 ### 주차 및 재해 방재 디지털트윈 시스템
