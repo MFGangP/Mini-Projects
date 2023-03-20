@@ -73,6 +73,8 @@ HTML 주석
 
 <img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/PyGame.png?raw=true" width="600" />
 
+<img src="https://github.com/MFGangP/Mini-Projects/blob/main/images/PyGameDead.png?raw=true" width="600" />
+
 ## 미니프로젝트 실습
 
 ### 주차 및 재해 방재 디지털트윈 시스템
