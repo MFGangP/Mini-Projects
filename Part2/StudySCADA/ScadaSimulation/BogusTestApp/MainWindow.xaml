@@ -6,8 +6,19 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Bogus TestApp" Height="450" Width="800">
+        Title="Bogus TestApp" Height="350" Width="600"
+        FontFamily="NanumGothic">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnGenDummyData" Content="더미데이터" 
+                Width="120" Margin="10" HorizontalAlignment="Left"
+                Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" Click="BtnGenDummyData_Click"/>
+        <!-- VerticalScrollBarVisibility 세로 스크롤 생성, AcceptsReturn 엔터키 허용 -->
+        <TextBox Grid.Row="1" x:Name="RtbResult" Margin="10" TextWrapping="Wrap" AcceptsReturn="True" 
+                 VerticalScrollBarVisibility="Visible" IsReadOnly="True" 
+                 FontSize="14" Style="{StaticResource MahApps.Styles.TextBox}"/>
     </Grid>
 </mah:MetroWindow>
