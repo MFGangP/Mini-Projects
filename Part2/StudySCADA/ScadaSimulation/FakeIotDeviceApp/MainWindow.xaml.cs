@@ -96,11 +96,11 @@ namespace FakeIotDeviceApp
         {
             if(client.IsConnected == true && client != null)
             {
-                client.Disconnect(); // 접속을 안 끊으면 메모리 상에 계속 남아있음!
+                client.Disconnect(); // 접속을 끊어주고
             }
             if (MqttThread != null)
             {
-                MqttThread.Abort();
+                MqttThread.Abort(); // 여기가 없으면 프로그램 종료 후에도 메모리에 남아있음.
             }
         }
     }
