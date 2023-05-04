@@ -29,6 +29,14 @@
             <Button x:Name="BtnConnect" Content="Connect" Margin="5" 
                     Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="BtnConnect_Click"/>
         </StackPanel>
-        <RichTextBox Grid.Row="1" Margin="10" x:Name="RtbLog" VerticalScrollBarVisibility="Visible"/>
+        <RichTextBox Grid.Row="1" Margin="10" x:Name="RtbLog" 
+                     VerticalScrollBarVisibility="Visible">
+            <!-- 사이 간격 띄워져서 나오는거 방지하는 방법 -->
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0" />
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
     </Grid>
 </mah:MetroWindow>
