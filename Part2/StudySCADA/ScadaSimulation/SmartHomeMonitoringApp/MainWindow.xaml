@@ -66,7 +66,6 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-
                 <MenuItem Header="디자인">
                     <MenuItem.Icon>
                         <iconPacks:PackIconRemixIcon Kind="Brush2Fill"/>
@@ -83,7 +82,6 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-
             <ToolBarTray>
                 <ToolBar Style="{StaticResource MahApps.Styles.ToolBar}">
                     <Button x:Name="BtnStartSubscribe" ToolTip="구독 시작">
