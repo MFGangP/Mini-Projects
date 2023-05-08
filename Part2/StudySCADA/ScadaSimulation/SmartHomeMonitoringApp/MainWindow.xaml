@@ -29,7 +29,7 @@
                     <MenuItem.Icon>
                         <iconPacks:PackIconJamIcons Kind="FileF"/>
                     </MenuItem.Icon>
-                    <MenuItem x:Name="MnuStartSubscibe" Header="시작">
+                    <MenuItem x:Name="MnuStartSubscibe" Header="시작" Click="MnuStartSubscibe_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconJamIcons Kind="PlayCircleF"/>
                         </MenuItem.Icon>

@@ -79,6 +79,7 @@ namespace FakeIotDeviceApp
                         RtbLog.AppendText($"{jsonValue}\n");
                         RtbLog.ScrollToEnd(); // 이걸 빼면 우리가 직접 스크롤을 내려야 된다.
                     }));
+
                     // 1초 동안 대기
                     Thread.Sleep(1000);
                 }
