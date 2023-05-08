@@ -113,8 +113,8 @@ namespace SmartHomeMonitoringApp.Views
                 //Debug.WriteLine(currValue["Humid"]);
                 try
                 {
-                    using (MySqlConnection conn = new MySqlConnection(Commons.MYSQL_CONNSTRING)
-                    { 
+                    using (MySqlConnection conn = new MySqlConnection(Commons.MYSQL_CONNSTRING))
+                    {
                         if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
                         string insQuery = "INSERT INTO smarthomesensor.....";
 
@@ -130,7 +130,7 @@ namespace SmartHomeMonitoringApp.Views
                         {
                             UpdateLog(">>> DB Insert Failed."); // 일어날 일이 거의 없음
                         }
-                        }
+                    }
                 }    
                 catch (Exception ex)
                 {
