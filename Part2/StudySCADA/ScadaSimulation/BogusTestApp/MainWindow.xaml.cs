@@ -18,8 +18,8 @@ namespace BogusTestApp
         private void BtnGenDummyData_Click(object sender, RoutedEventArgs e)
         {
             var repo = new SampleCustomerRepository();
-            var customers = repo.GetCustomers(100);
-            var result = JsonConvert.SerializeObject(customers, Formatting.Indented); // 들여쓰기 여부 Formatting.Indented
+            var customers = repo.GetCustomers(1000);
+            var result = JsonConvert.SerializeObject(customers, Formatting.Indented);
             RtbResult.Text = result;
         }
     }

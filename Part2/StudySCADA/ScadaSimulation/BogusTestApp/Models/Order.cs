@@ -6,8 +6,7 @@ namespace BogusTestApp.Models
     {
         public Guid Id { get; set; } // 키값
         public DateTime Date { get; set; } // 주문일자
-        public decimal OrderValue { get; set; } // 주문 갯수
-        public bool Shipped { get; set; } // 선적 여부
-
+        public decimal OrderValue { get; set; } // 주문갯수
+        public bool Shipped { get; set; } // 선적여부
     }
 }
