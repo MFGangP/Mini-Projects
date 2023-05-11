@@ -76,10 +76,15 @@ namespace FakeIotDeviceApp
 
                         if (MaxCount <= 0 )
                         {
+                            RtbLog.SelectAll();
+                            RtbLog.Selection.Text = string.Empty;
+                            MaxCount = 50;
+                            RtbLog.AppendText(">>> 문서건수가 많아져서 초기화.\n");
                         }
                         // RtbLog에 출력                        
                         RtbLog.AppendText($"{jsonValue}\n");
                         RtbLog.ScrollToEnd(); // 스크롤 제일 밑으로 보내기
+                        MaxCount--;
                     }));
                     
                     // 1초동안 대기
