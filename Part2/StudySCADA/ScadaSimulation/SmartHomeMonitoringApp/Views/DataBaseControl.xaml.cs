@@ -125,7 +125,7 @@ namespace SmartHomeMonitoringApp.Views
                     TxtLog.Text = string.Empty;
                     TxtLog.Text += ">>> 문서 건수가 많아져 초기화!\n";
                     TxtLog.ScrollToEnd();
-                    TxtLog = 50; // 테스트할 땐 10, 운영시는 50
+                    // TxtLog. = 50; // 테스트할 땐 10, 운영시는 50
                 }
                 TxtLog.Text += $"{msg}\n";
                 TxtLog.ScrollToEnd();
