@@ -29,6 +29,7 @@ namespace SmartHomeMonitoringApp.Views
     /// </summary>
     public partial class DataBaseControl : UserControl
     {
+        int MaxCount = 50;
         public bool IsConnected { get; set; }
         Thread MqttThread { get; set; }  // 없으면 UI컨트롤이 어려워짐
 
@@ -119,6 +120,13 @@ namespace SmartHomeMonitoringApp.Views
         {
             // 예외처리 필요!!
             this.Invoke(() => {
+                if (MaxCount <= 0)
+                {
+                    TxtLog.Text = string.Empty;
+                    TxtLog.Text += ">>> 문서 건수가 많아져 초기화!\n";
+                    TxtLog.ScrollToEnd();
+                    TxtLog = 50; // 테스트할 땐 10, 운영시는 50
+                }
                 TxtLog.Text += $"{msg}\n";
                 TxtLog.ScrollToEnd();
             });

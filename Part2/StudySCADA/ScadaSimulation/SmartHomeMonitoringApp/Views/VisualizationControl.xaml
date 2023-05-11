@@ -45,6 +45,11 @@
                     Style="{StaticResource MahApps.Styles.Button.Square.Accent}" />
         </Grid>
 
-        <lvc:CartesianChart Grid.Row="2" Margin="10"/>
+        <lvc:CartesianChart Grid.Row="2" Margin="10" Background="Gainsboro">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="Temp" Values="{Binding TempValues}" />
+                <lvc:LineSeries Title="Humid" Values="{Binding HumidValues}" />
+            </lvc:CartesianChart.Series>
+        </lvc:CartesianChart>
     </Grid>
 </UserControl>
