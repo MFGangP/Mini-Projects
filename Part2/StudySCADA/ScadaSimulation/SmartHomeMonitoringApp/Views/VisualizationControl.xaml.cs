@@ -1,25 +1,14 @@
-﻿using LiveCharts;
-using LiveCharts.Wpf;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using OxyPlot;
+using OxyPlot.Legends;
+using OxyPlot.Series;
 using SmartHomeMonitoringApp.Logics;
-using SmartHomeMonitoringApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SmartHomeMonitoringApp.Views
 {
@@ -109,16 +98,16 @@ namespace SmartHomeMonitoringApp.Views
                     conn.Open();
                     var searchQuery = $@"SELECT id,
                                                 Home_Id,
-                                                RoomName,
+                                                Room_Name,
                                                 Sensing_Datetime,
                                                 Temp,
                                                 Humid
                                            FROM smarthomesensor
-                                          WHERE UPPER(RoomName) = @RoomName
+                                          WHERE UPPER(Room_Name) = @Room_Name
                                             AND DATE_FORMAT(Sensing_Datetime, '%Y-%m-%d') 
                                         BETWEEN @StartDate AND @EndDate;";
                     MySqlCommand cmd = new MySqlCommand(searchQuery, conn);
-                    cmd.Parameters.AddWithValue("@RoomName", CboRoomName.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@Room_Name", CboRoomName.SelectedValue.ToString());
                     cmd.Parameters.AddWithValue("@StartDate", DtpStart.Text);
                     cmd.Parameters.AddWithValue("@EndDate", DtpEnd.Text);
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -133,15 +122,52 @@ namespace SmartHomeMonitoringApp.Views
             }
 
             // DB에서 가져온 데이터 차트에 뿌리도록 처리
+            // Create two line series (markers are hidden by default)
+            var tmp = new PlotModel { Title = $"{CboRoomName.SelectedValue} ROOM", DefaultFont="NanumGothic" };
+
+            var legend = new Legend
+            {
+                LegendBorder = OxyColors.DarkGray,
+                LegendBackground = OxyColor.FromArgb(150, 255, 255, 255),
+                LegendPosition = LegendPosition.TopRight,
+                LegendPlacement = LegendPlacement.Outside,
+            };
+
+            tmp.Legends.Add(legend); // 범례 추가
+
+            var tempSeries = new LineSeries 
+            { 
+                Title = "Temperature(℃)", 
+                MarkerType = MarkerType.Circle,
+                Color = OxyColors.DarkOrange, // 라인 색상 온도는 주황색
+            };
+            var humidSeries = new LineSeries 
+            { 
+                Title = "Humidity(%)", 
+                MarkerType = MarkerType.Square,
+                Color = OxyColors.Aqua, // 습도는 아쿠아
+            };
+
             if (ds.Tables[0].Rows.Count > 0)
             {
-                
+                TotalDateCount = ds.Tables[0].Rows.Count;
+
+                var count = 0;
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
+                    tempSeries.Points.Add(new DataPoint(count++, Convert.ToDouble(row["Temp"])));
+                    humidSeries.Points.Add(new DataPoint(count++, Convert.ToDouble(row["Humid"])));
                     Convert.ToDouble(row["Temp"]); // 갯수 만큼 전부 다 담음
-                    Convert.ToDouble(row["Humid"]);
                 }
             }
+            // if 문 안에 들어가냐 마냐에 따라서 결과가 달라지니까 잘 봐야된다.
+            // Add the series to the plot model
+            tmp.Series.Add(tempSeries);
+            tmp.Series.Add(humidSeries);
+
+            OpvSmartHome.Model = tmp;
+
+            LblTotalCount.Content = $"검색데이터 {TotalDateCount}개";
         }
     }
 }

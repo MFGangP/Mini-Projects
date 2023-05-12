@@ -35,16 +35,18 @@
                 <ComboBox x:Name="CboRoomName" Width="100" FontSize="14" VerticalAlignment="Center"
                           Style="{StaticResource MahApps.Styles.ComboBox}"/>
                 <Label Content="검색 시작일" VerticalAlignment="Center" FontSize="14" Margin="10,0,5,0" />
-                <DatePicker x:Name="DtpStart" Width="120" FontSize="14" VerticalAlignment="Center"
+                <DatePicker x:Name="DtpStart" Width="115" FontSize="14" VerticalAlignment="Center"
                             Style="{StaticResource MahApps.Styles.DatePicker}"/>
                 <Label Content="~ 검색 종료일" VerticalAlignment="Center" FontSize="14" Margin="10,0,5,0" />
-                <DatePicker x:Name="DtpEnd" Width="120" FontSize="14" VerticalAlignment="Center" />
+                <DatePicker x:Name="DtpEnd" Width="115" FontSize="14" VerticalAlignment="Center" />
             </StackPanel>
 
-            <Button Grid.Column="2" x:Name="BtnSearch"   Content="검색" Margin="10,10" Width="80" 
+            <Label Grid.Column="1" x:Name="LblTotalCount" Content="검색데이터 0개" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+            <Button Grid.Column="2" x:Name="BtnSearch"   Content="검색" Margin="10,10" Width="70" 
                     Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Click="BtnSearch_Click" />
         </Grid>
-        <oxy:PlotView Grid.Row="2" Margin="10" Background="Gainsboro">
+        <oxy:PlotView Grid.Row="2" x:Name="OpvSmartHome" Margin="10" Background="Gainsboro">
         </oxy:PlotView>
     </Grid>
 </UserControl>
